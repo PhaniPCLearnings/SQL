@@ -1,0 +1,40 @@
+There are 4 types of SQL Commands
+	1. DDL  - Data Definition Language - Create , Alter
+	2. DML  - Data Manipulation Language - Update , Delete
+	3. DCL  - Data Control Language	- Grant and Revoke
+	4. DQL  - Data Query Language - Select
+	
+	
+	
+*** Create Database DBNAME
+
+*** USE [DBNAME]
+
+*** DROP Database [DBNAME]
+
+*** Example for Creating a table
+
+CREATE TABLE store_Details_1
+(
+store_Id int primary key,
+store_Name varchar(40) not null,
+sales int check (sales>0 and sales<10),
+order_Num int unique,
+store_Location varchar(100) default('Ongole'),
+City varchar(100),
+pincode int
+)
+
+
+*** For Suppose if we have passed sales as 11 it will throw an error - Conflict Error
+
+
+
+*** Insert - two ways - 1 element at a time or multiple with , seperator
+
+ 1. Insert into store_Details_1 values(1,'PC1',111,'101','Bangalore','ECITY',560100)
+ 
+ 2. Insert into store_Details values(2,'PC2',5,'102','Hyderabad','Miyapur',500089),(3,'PC3',7,'107','Ongole','MMRoad',523001)
+
+
+*** delete from table_name - Will delete the records but keeps the structure
